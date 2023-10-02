@@ -10,8 +10,19 @@ screen.setup(width=700, height=700)
 user_choice = screen.textinput(title="Who will win?", prompt="which turtle do you think will win? Choose a colour: ")
 # This works just like an input so we just assign it to a variable.
 colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"]
-y_positions = [-70, -30, 10, 50, 90, 130]
+y_positions = [-100, -60, -20, 20, 60, 100]
 all_turtles = []
+
+referee = Turtle(shape="turtle")
+referee.penup()
+referee.forward(270)
+referee.pendown()
+referee.left(90)
+referee.forward(200)
+referee.left(180)
+referee.forward(400)
+referee.left(180)
+
 
 for turtle_index in range(0,6):
     new_turtle = Turtle(shape="turtle")
@@ -43,7 +54,6 @@ while is_race_on:
                 print(f"Your turtle didn't win... the winner was the {winning_color} turtle.")
         random_distance = random.randint(0, 10)
         turtle.forward(random_distance)
-    
 
 
 screen.exitonclick()

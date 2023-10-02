@@ -32,8 +32,9 @@ if user_choice:
 
 while is_race_on:
     #This way the while loop only starts when is_race_on is true and hence after the user has made a choice.
-    random_distance = random.randint(0, 10)
-    turtle.forward(random_distance)
+    for turtle in all_turtles:
+        random_distance = random.randint(0, 10)
+        turtle.forward(random_distance)
     
 
 

@@ -1,5 +1,8 @@
 from turtle import Turtle, Screen
 
+
+is_race_on = False
+# The race doesn't start
 screen = Screen()
 screen.setup(width=700, height=700)
 # this method allows us to choose the width and height of the window that will show up. Use keywords
@@ -22,7 +25,9 @@ for turtle_index in range(0,6):
     shell.goto(x=-330, y=y_positions[turtle_index])
 # Now we can just make more.
 
-
+if user_choice:
+    # If user choice input is triggered then race is on.
+    is_race_on = True
 
 
 

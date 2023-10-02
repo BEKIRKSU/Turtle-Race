@@ -33,6 +33,14 @@ if user_choice:
 while is_race_on:
     #This way the while loop only starts when is_race_on is true and hence after the user has made a choice.
     for turtle in all_turtles:
+        if turtle.xcor() > 230:
+            is_race_on = False
+            # xcor =  x coordinate. If the turtle passes 330 on the x axis it has passed the finish line.
+            winning_color = turtle.pencolor()
+            if winning_color == user_choice:
+                print(f"Your turtle won! The {winning_color} turtle is the winner!")
+            else:
+                print(f"Your turtle didn't win... the winner was the {winning_color} turtle.")
         random_distance = random.randint(0, 10)
         turtle.forward(random_distance)
     

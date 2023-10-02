@@ -1,6 +1,4 @@
 from turtle import Turtle, Screen
-import random
-
 
 screen = Screen()
 screen.setup(width=700, height=700)
@@ -13,7 +11,7 @@ y_positions = [-70, -30, 10, 50, 90, 130]
 
 for turtle_index in range(0,6):
     shell = Turtle(shape="turtle")
-    shell.color(random.choice(colors))
+    shell.color(colors[turtle_index])
     shell.shapesize(2, 2)
 # We can just set the shape when we set the name.
     shell.penup()
